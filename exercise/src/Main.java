@@ -17,11 +17,11 @@ public class Main {
        System.out.print("Enter the number of the person: ");
        int n = sc.nextInt();
        for (int i = 0; i < n; i++) {
-           System.out.println("Tax payer #" + (i + 1) + " data: ");
+           System.out.println("\nTax payer #" + (i + 1) + " data: ");
            System.out.print("Legal or Physical: ");
            String typePerson = sc.next().toUpperCase();
            if(typePerson.equals("LEGAL")) {
-               System.out.print("\nName: ");
+               System.out.print("Name: ");
                String name = sc.next();
                System.out.print("Anual Income: ");
                double anualIncome = sc.nextDouble();
@@ -36,12 +36,12 @@ public class Main {
                System.out.print("Anual Income: ");
                double anualIncome = sc.nextDouble();
                System.out.print("Health expeditures: ");
-               double health = sc.nextInt();
+               double health = sc.nextDouble();
                Contributor contributor = new PhysicalPerson(name, anualIncome, health);
                contributors.add(contributor);
            }
        }
-       System.out.print("\n TAXES PAID:");
+       System.out.print("\nTAXES PAID:\n");
        for(Contributor contributor : contributors) {
            System.out.print(contributor);
        }

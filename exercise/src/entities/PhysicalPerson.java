@@ -37,7 +37,8 @@ public class PhysicalPerson extends Contributor{
     }
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(getName()).append(" $").append(taxPaid());
+        String anualIncomeFormat = String.format("%.2f", taxPaid());
+        sb.append(getName()).append(" $").append(anualIncomeFormat).append("\n");
         return sb.toString();
     }
 }
